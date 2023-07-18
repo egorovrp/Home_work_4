@@ -5,7 +5,7 @@
 double Promt(string message)
 {
     Console.Write(message);
-	double num = double.Parse(Console.ReadLine());
+	double num = double.Parse(Console.ReadLine()!);
 	return num;
 }
 

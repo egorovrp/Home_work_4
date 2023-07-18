@@ -9,14 +9,25 @@ int Promt (string message)
 	return number;
 }
 
-// int[] array = {insert}
+int[] GetArray(int minValue, int maxValue)
+{
+    int[] array = new int[8];
+    for (int i = 0; i < 8; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue + 1);
+    }
+    return array;
+}
 
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+  }
 
-int a1 = Promt("Введите 1 элемент массива");
-int a2 = Promt("Введите 2 элемент массива");
-int a3 = Promt("Введите 3 элемент массива");
-int a4 = Promt("Введите 4 элемент массива");
-int a5 = Promt("Введите 5 элемент массива");
-int a6 = Promt("Введите 6 элемент массива");
-int a7 = Promt("Введите 7 элемент массива");
-int a8 = Promt("Введите 8 элемент массива");
+int min = Promt("Введите минимальное значение числа в массиве: ");
+int max = Promt("Введите максимальное значение числа в массиве: ");
+int[] Massive = GetArray(min, max);
+PrintArray(Massive);

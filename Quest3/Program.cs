@@ -10,24 +10,19 @@ int Promt (string message)
 	return num;
 }
 
-int SearchNumber (int a)
+int SearchNumber(int num)
 {
-int [] array = {};
-int i;
-while ();
-
+	int sum = 0;
+	int a;
+	while (num != 0)
+	{
+		a = num%10;
+		sum = sum + a;
+		num = num/10;
+	}
+	return sum;
 }
 
 int Number = Promt ("Введите число: ");
-
-
-
-
-// 	if(a >= 10)  //находим первое число
-// 	num1 = a/10;
-	
-// 	if(a>=100) // находим второе число
-// 	num2 = (a/10)%10;
-	
-// 	if (a>1000) // находим третье число
-// 	num3= (a/10);
+int Res = SearchNumber(Number);
+Console.WriteLine(Res);
